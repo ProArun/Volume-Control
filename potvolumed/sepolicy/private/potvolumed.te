@@ -1,0 +1,14 @@
+type potvolumed,      domain;
+type potvolumed_exec, exec_type, vendor_file_type, file_type;
+
+# spidev_device: AOSP 15 base policy does not define this — declare it here
+type spidev_device, dev_type;
+
+init_daemon_domain(potvolumed)
+
+allow potvolumed spidev_device:chr_file { open read write ioctl };
+
+# /dev/uinput is labeled uhid_device in AOSP 15 (not uinput_device)
+allow potvolumed uhid_device:chr_file { open read write ioctl };
+
+allow potvolumed logd:unix_dgram_socket sendto;

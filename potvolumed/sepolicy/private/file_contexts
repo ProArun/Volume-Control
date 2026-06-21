@@ -1,0 +1,2 @@
+/vendor/bin/potvolumed    u:object_r:potvolumed_exec:s0
+/dev/spidev[0-9]*         u:object_r:spidev_device:s0

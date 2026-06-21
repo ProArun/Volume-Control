@@ -1,0 +1,30 @@
+// Copyright (C) 2024 MyOEM
+// SPDX-License-Identifier: Apache-2.0
+
+soong_namespace {}
+
+cc_binary {
+    name: "potvolumed",
+    vendor: true,
+    init_rc: ["potvolumed.rc"],
+
+    srcs: [
+        "src/main.cpp",
+        "src/SpiReader.cpp",
+        "src/AdcFilter.cpp",
+        "src/VolumeMapper.cpp",
+        "src/VolumeController.cpp",
+    ],
+
+    local_include_dirs: ["src"],
+
+    shared_libs: [
+        "liblog",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+    ],
+}
