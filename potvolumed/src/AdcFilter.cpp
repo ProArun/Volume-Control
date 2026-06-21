@@ -1,7 +1,5 @@
 #define LOG_TAG "potvolumed"
 
-// Copyright (C) 2024 MyOEM
-// SPDX-License-Identifier: Apache-2.0
 
 #include "AdcFilter.h"
 

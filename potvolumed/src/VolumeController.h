@@ -1,5 +1,3 @@
-// Copyright (C) 2024 MyOEM
-// SPDX-License-Identifier: Apache-2.0
 #pragma once
 
 class VolumeController {
