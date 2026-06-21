@@ -6,6 +6,8 @@ An AOSP vendor daemon that reads a physical potentiometer via SPI and controls A
 
 ## Hardware Setup
 
+![Wiring Diagram — RPi5 ↔ MCP3008 ↔ Potentiometer](wiring_diagram.png)
+
 ```
 Potentiometer (wiper) → MCP3008 CH0 → /dev/spidev0.0 → potvolumed
                                                               ↓
